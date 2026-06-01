@@ -17,6 +17,11 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      - name: Fix gradle.properties
+        run: |
+          echo "android.useAndroidX=true" >> gradle.properties
+          echo "android.enableJetifier=true" >> gradle.properties
+
       - name: Install Gradle & Fix Wrapper
         run: |
           curl -fsSL https://services.gradle.org/distributions/gradle-8.7-bin.zip -o gradle.zip
