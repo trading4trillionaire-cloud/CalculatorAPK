@@ -340,6 +340,7 @@ const SVC = [
   {id:'ph', rate:10, name:'Colored Photocopy'},
 ];
 const Q = {pc:0, sp:0, cp:0, ph:0};
+let inputFocused = false;
 
 function ch(e, id, d) {
   if (e) e.preventDefault();
@@ -352,15 +353,18 @@ function sq(id, v) {
 function sf(id) {
   const inp = document.getElementById('q-'+id);
   if (inp.value === '0') inp.value = '';
+  inputFocused = true;
 }
 function sb(id) {
   const inp = document.getElementById('q-'+id);
   if (inp.value === '' || inp.value === null) {
     inp.value = 0; Q[id] = 0;
   }
+  inputFocused = false;
 }
 
 function showResult() {
+  if (inputFocused) return;
   let total = 0;
   const items = [];
   SVC.forEach(s => {
