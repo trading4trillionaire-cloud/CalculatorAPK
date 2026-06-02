@@ -360,7 +360,7 @@ function sb(id) {
   if (inp.value === '' || inp.value === null) {
     inp.value = 0; Q[id] = 0;
   }
-  inputFocused = false;
+  setTimeout(() => { inputFocused = false; }, 300);
 }
 
 function showResult() {
