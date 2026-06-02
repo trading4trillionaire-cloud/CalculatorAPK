@@ -1,19 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=https://google.com">
-    <title>Redirecting...</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Splash</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 100vw;
+      height: 100vh;
+      background: #1B8A4C;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .printer-wrap {
+      width: min(280px, 60vw);
+      filter: drop-shadow(0 8px 32px rgba(0,0,0,0.2));
+    }
+  </style>
 </head>
 <body>
+  <div class="printer-wrap">
+    <svg viewBox="0 0 260 220" xmlns="http://www.w3.org/2000/svg" width="100%">
 
-    <p>Redirecting to Service... Agar aap redirect nahi hue, Internet Issue ya koi aur bada issue hai. Developer se baat karein. --- Nihal Thakral</p>
+      <!-- Paper sheet sticking out top -->
+      <rect x="72" y="38" width="116" height="74" rx="4"
+            fill="#F5F0E8" stroke="#D8D0C0" stroke-width="1.5"/>
+      <!-- Lines on paper -->
+      <rect x="88" y="52" width="84" height="5" rx="2" fill="#BDBDBD"/>
+      <rect x="88" y="64" width="64" height="5" rx="2" fill="#BDBDBD"/>
+      <rect x="88" y="76" width="74" height="5" rx="2" fill="#BDBDBD"/>
 
+      <!-- Printer body -->
+      <rect x="36" y="100" width="188" height="80" rx="10"
+            fill="#FAFAFA" stroke="#D0CCBEcc" stroke-width="1.5"/>
+
+      <!-- Paper slot top -->
+      <rect x="72" y="100" width="116" height="10" rx="2" fill="#E0D8CC"/>
+
+      <!-- Output tray -->
+      <rect x="72" y="168" width="116" height="8" rx="2" fill="#D0C8BC"/>
+
+      <!-- Control panel -->
+      <rect x="170" y="114" width="40" height="30" rx="5"
+            fill="#EDEBE5" stroke="#CCC9BE" stroke-width="1"/>
+
+      <!-- Status light -->
+      <circle cx="183" cy="126" r="5" fill="#34D399"/>
+
+      <!-- Power button -->
+      <circle cx="200" cy="126" r="6" fill="none" stroke="#AAAAAA" stroke-width="1.5"/>
+      <line x1="200" y1="120.5" x2="200" y2="125.5"
+            stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round"/>
+
+      <!-- Vent lines -->
+      <line x1="54" y1="120" x2="54" y2="152" stroke="#D0CCBE" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="61" y1="120" x2="61" y2="152" stroke="#D0CCBE" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="68" y1="120" x2="68" y2="152" stroke="#D0CCBE" stroke-width="1.2" stroke-linecap="round"/>
+
+      <!-- Feet -->
+      <rect x="60" y="176" width="30" height="8" rx="4" fill="#D8D4CA"/>
+      <rect x="170" y="176" width="30" height="8" rx="4" fill="#D8D4CA"/>
+
+    </svg>
+  </div>
     <script>
         // Backup JavaScript: Agar meta tag kisi wajah se kaam nahi kiya, toh yeh instantly redirect kar dega
         window.location.href = "https://developer-apps.kesug.com/user/rahul-thakur/calculator.html";
     </script>
-    
 </body>
 </html>
